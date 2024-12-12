@@ -1,7 +1,9 @@
 // This example is intended to provide a quick
 // review of inheritance and polymorphism. It works
 // with ciphers.
-
+// 
+// Name: Mauricio Castaneda 1
+// 
 // NOTE: this is another bonus opportunity!!! Complete the code by creating two
 //       derived classes. One for Caesar Cipher and 
 //       one for another Substitution Cipher of your choice. You need to 
@@ -16,10 +18,43 @@
 //                    this up to be an interface like class.
 
 #include "Caesar.hpp"
+#include "SubstitutionCipher.hpp"
 
 int main(void)
 {
 	//Cipher c; // can't instantiate because it's an abstract class
+
+	Caesar caeserCipher(3);  // SHIFT 3 
+
+	std::string message = "\n cpts 122 is a fun class";
+
+	std::string encodedCaeser = caeserCipher.encode(message);
+
+	std::string decodedCipher = caeserCipher.decode(encodedCaeser);
+
+
+	//Display results shift 3 ->
+
+	std::cout << "--------Original Message-------- " << message << std::endl;
+	//what exaclty does encoded do??
+	std::cout << "\n Encoded Message Caeser Cihper " << encodedCaeser << std::endl;
+	// so whats exaclty does decode do??
+	std::cout << "\n Decoded Message Caeser Cipher " << decodedCipher << std::endl;
+
+
+	Sub Substitution;// create the substitution
+
+	std::string encodedSub = Substitution.encode(message);
+
+	std::string decodedSub = Substitution.decode(encodedSub);
+
+	//Display
+
+
+	std::cout << "\n Encoded  Message <Substitution Cipher> " << encodedSub <<std:: endl;
+
+	std::cout << "\n Decoded Message <Substitution Cipher> " << decodedCipher << std::endl;
+
 
 	return 0;
 }
