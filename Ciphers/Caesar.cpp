@@ -1,4 +1,4 @@
-#pragma once
+
 
 #include "Caesar.hpp"
 
@@ -31,7 +31,7 @@
 
 	string Caesar::decode(string& msg) {
 
-		string result = " "; // empty string
+		string result = ""; // empty string
 
 		for (char b : msg) {
 
@@ -39,7 +39,7 @@
 
 				char base = isupper(b) ? 'A' : 'a';
 
-				result += (b - shifts + 26) % 26 + base;
+				result += (b - base - shifts + 26) % 26 + base;
 
 			}
 			else

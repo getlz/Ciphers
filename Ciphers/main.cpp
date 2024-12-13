@@ -2,7 +2,7 @@
 // review of inheritance and polymorphism. It works
 // with ciphers.
 // 
-// Name: Mauricio Castaneda 1
+// Name: Mauricio Castaneda 
 // 
 // NOTE: this is another bonus opportunity!!! Complete the code by creating two
 //       derived classes. One for Caesar Cipher and 
@@ -26,7 +26,7 @@ int main(void)
 
 	Caesar caeserCipher(3);  // SHIFT 3 
 
-	std::string message = "\n cpts 122 is a fun class";
+	std::string message = "\n CPTS_122 IS A FUN CLASS ";// MESSAGE WE WANT TO ENCODE/DECODE
 
 	std::string encodedCaeser = caeserCipher.encode(message);
 
